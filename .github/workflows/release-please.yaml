@@ -94,7 +94,7 @@ jobs:
   publish-charts:
     runs-on: self-hosted
     needs: get-bumped-charts
-    if: ${{ needs.get-bumped-charts.outputs.result == 'ok' }}
+    if: ${{ needs.get-bumped-charts.outputs.result == 'Mok' }}
     name: Publish Charts to registry
     permissions:
       contents: read
@@ -157,7 +157,7 @@ jobs:
   publish-charts-github-release:
     runs-on: ubuntu-latest
     needs: get-bumped-charts
-    if: ${{ needs.get-bumped-charts.outputs.result == 'ok' }}
+    if: ${{ needs.get-bumped-charts.outputs.result == 'Mok' }}
     name: Publish Charts to Github
     permissions:
       contents: write
